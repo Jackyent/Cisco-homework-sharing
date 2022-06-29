@@ -3,4 +3,4 @@
 
 目录：
 <hr/>
-1.[配置DHCP](src=https://github.com/Jackyent/Cisco-homework-sharing/tree/main/%E9%85%8D%E7%BD%AEDHCP)
+1.[配置DHCP](https://github.com/Jackyent/Cisco-homework-sharing/tree/main/%E9%85%8D%E7%BD%AEDHCP)
