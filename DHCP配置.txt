@@ -1,0 +1,30 @@
+R2
+ip dhcp excluded-address 192.168.10.1 192.168.10.10   （排除地址池）
+ip dhcp excluded-address 192.168.30.1 192.168.30.10
+
+ip dhcp pool R1-LAN
+network 192.168.10.1 255.255.255.0
+default-router 192.168.10.1
+dns-server 192.168.20.254
+
+ip dhcp pool R3-LAN
+network 192.168.30.1 255.255.255.0 （地址池范围）
+default-router 192.168.30.1              （网关 一般是路由器的IP地址）
+dns-server 192.168.20.254                （DNS服务器的IP地址）
+
+int g0/1 
+ip address dhcp                （启用IP自动获取DHCP地址）
+no shutdown
+
+R1:
+int g0/0
+ip helper-address 10.1.1.2 
+(送出接口的ip地址：连接的交换机是g0/0 但送出接口的目标地址是s0/0/0的IP地址)
+
+R3:
+int g0/0
+ip helper-address 10.2.2.2
+(送出接口的ip地址：连接的交换机是g0/0 但送出接口的目标地址是s0/0/1的IP地址)
+
+PC1，PC2：
+自动获取DHCP分配的地址
