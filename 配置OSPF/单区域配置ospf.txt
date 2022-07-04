@@ -1,0 +1,33 @@
+R1:
+router ospf 10
+network 172.16.1.1 0.0.0.255 area 0
+network 172.16.3.1 0.0.0.3 area 0
+network 192.168.10.5 0.0.0.3 area 0
+passive-int g0/0
+
+router ospf 10
+router-id 1.1.1.1
+用户模式：clear ip ospf process（更新新的ospf的ID）
+
+R2:
+router ospf 10
+network 172.16.2.1 0.0.0.255 area 0
+network 172.16.3.2 0.0.0.3 area 0
+network 192.168.10.9 0.0.0.3 area 0
+passive-int g0/0
+
+router ospf 10
+router-id 2.2.2.2
+用户模式：clear ip ospf process（更新新的ospf的ID）
+
+R3:
+router ospf 10
+network 192.168.1.1 0.0.0.255 area 0
+network 192.168.10.6 0.0.0.3 area 0
+network 192.168.10.10 0.0.0.3 area 0
+passive-int g0/0
+
+router ospf 10
+router-id 3.3.3.3
+用户模式：clear ip ospf process（更新新的ospf的ID）
+简写：clear ip ospf pro
