@@ -5,5 +5,5 @@
 ### 目录：
 
 [配置DHCP](https://github.com/Jackyent/Cisco-homework-sharing/tree/main/%E9%85%8D%E7%BD%AEDHCP)
-
+[配置OSPF](https://github.com/Jackyent/Cisco-homework-sharing/tree/main/%E9%85%8D%E7%BD%AEOSPF)
 
